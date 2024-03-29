@@ -1,0 +1,34 @@
+{
+  "name": "@jodd/atom-state",
+  "version": "1.0.2",
+  "description": "atomic state manager for react",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "tsup ./src"
+  },
+  "files": [
+    "dist",
+    "package.json"
+  ],
+  "exports": {
+    ".": {
+      "require": "./dist/index.js",
+      "import": "./dist/index.mjs",
+      "types": "./dist/index.d.ts"
+    }
+  },
+  "main": "./dist/index.js",
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.ts",
+  "keywords": [],
+  "author": "bibekjodd",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/react": "^18.2.73",
+    "tsup": "^8.0.2",
+    "typescript": "^5.1.6"
+  },
+  "peerDependencies": {
+    "react": "^18.2.0"
+  }
+}
