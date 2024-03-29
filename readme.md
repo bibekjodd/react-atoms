@@ -1,6 +1,6 @@
 ## Atom State
 
-#### Simple atom based state manager for react
+#### Atom based state manager for react
 
 ### Installation
 
