@@ -2,6 +2,8 @@
 
 #### Atom based state manager for react
 
+## [Npm Package Link](https://www.npmjs.com/package/@jodd/atom-state)
+
 ### Installation
 
 ```shell
