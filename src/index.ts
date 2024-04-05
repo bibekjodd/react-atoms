@@ -20,6 +20,7 @@ export function atom<AtomType>(
   } else {
     value = initialValue;
   }
+
   const subscribers = new Set<(newValue: AtomType) => void>();
 
   return {
@@ -49,8 +50,11 @@ export function useAtom<AtomType>(
   return [useSyncExternalStore(atom.subscribe, atom.get), atom.set];
 }
 
-export function useAtomValue<AtomType>(atom: Atom<AtomType>): AtomType {
-  return useSyncExternalStore(atom.subscribe, atom.get);
+export function useAtomValue<AtomType, T = AtomType>(
+  atom: Atom<AtomType>,
+  selector = (value: AtomType): T => value as unknown as T
+): T {
+  return useSyncExternalStore(atom.subscribe, () => selector(atom.get()));
 }
 
 export function useSetAtom<AtomType>(

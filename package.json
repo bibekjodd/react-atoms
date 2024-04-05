@@ -1,7 +1,12 @@
 {
-  "name": "@jodd/atom-state",
-  "version": "1.0.2",
+  "name": "@jodd/react-atoms",
+  "version": "1.0.1",
   "description": "atomic state manager for react",
+  "homepage": "https://github.com/bibekjodd/react-atoms",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bibekjodd/react-atoms.git"
+  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "tsup ./src"
